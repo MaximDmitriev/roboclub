@@ -781,7 +781,122 @@ nav{
         background-color: @text-color;
     }
 }
-
+.modal-frame{
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    animation: fade-in 1s;
+    &-form{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        position: absolute;
+        // z-index: 5;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+        // margin: 0 auto;
+        width: 27rem;
+        height: 27rem;
+        background-color: @bc-light;
+        border: 1px solid @text-color;
+        .close-btn{
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            background-color: @bc-light;
+            border-radius: 50%;
+            height: 40px;
+            width: 40px;
+            text-align: center;
+            img{
+                width: 60%;
+                height: 60%;
+                margin-top: 7px;
+            }
+        }
+    }
+}
+.social-media{
+    width: 100%;
+    height: 55rem;
+    .vk{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 55rem;
+        background-color: @bc-dark;
+        // margin-top: 50%;
+        // transform: translateY(-55%);
+        &-post{
+            // margin: 0 auto;
+        }
+        &-prev{
+            position:absolute;
+            z-index: 5;
+            cursor: pointer;
+            top: 0;
+            width: 70px;
+            // left: -6%;
+            left: 0;
+            background-color: rgba(0,0,0,.0);
+            transition: 1s;
+            height: 100%;
+            &:hover {
+                background-color: rgba(0,0,0,.2);
+            }
+            &-left{
+                width: 30px;
+                height: 30px;
+                background: url(../img/left-arrow.svg) center no-repeat;
+                background-size: cover;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%);
+                opacity: 0.2;
+                transition: 1s;
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+        &-next {
+            position:absolute;
+            z-index: 5;
+            cursor: pointer;
+            top: 0;
+            width: 70px;
+            background-color: rgba(0,0,0,.0);
+            transition: 1s;
+            height: 100%;
+            // right: -6%;
+            right: 0;
+            &:hover {
+                background-color: rgba(0,0,0,.2);
+            }
+            &-right{
+                width: 30px;
+                height: 30px;
+                background: url(../img/right-arrow.svg) center no-repeat;
+                background-size: cover;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%);
+                opacity: 0.2;
+                transition: 1s;
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    
+}
 .home-btn{
     position: fixed;
     right: 2%;

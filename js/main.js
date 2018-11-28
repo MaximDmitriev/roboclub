@@ -204,5 +204,81 @@ document.addEventListener('DOMContentLoaded', () => {
         myMap2.geoObjects.add(placeVdnh);
       }
 
+      //vk 
+  
+
+
+    (function() {
+        VK.Widgets.Post("postVk1", -146293871, 248, 'JGRAacVK2d0-MENU8FFhqC4klDuK', {width: 400});
+    }());
+    
+    (function() {
+        VK.Widgets.Post("postVk2", -146293871, 201, 'IgEMe3hkyIS0b3S-ryOkAuXhaD4S', {width: 400});
+    }());
+
+    (function() {
+        VK.Widgets.Post("postVk3", -146293871, 255, '0zCkudzKbnQtuLM14pbc9qjMlfGX', {width: 400});
+    }());
+
+    (function() {
+        VK.Widgets.Post("postVk4", -146293871, 252, '4AeOyEgT5syf-gUzPRRefXjR0lZP', {width: 400});
+    }());
+
+    (function() {
+        VK.Widgets.Post("postVk5", -146293871, 253, '5WZdiXl-3ArEI3aDgWFXDWm475MC', {width: 400});
+    }());
+
+    let vkSlide = document.querySelectorAll(".vk-post"),
+        btnVkprev = document.querySelector(".vk-prev"),
+        btnVknext = document.querySelector(".vk-next"),
+        vkPostNum = 0;
+
+    vkSlide.forEach((item) => {
+        item.style.display = "none";
+    });
+
+    vkSlide[vkPostNum].style.display = "block";
+
+    btnVknext.addEventListener('click', () =>{
+        vkSlide[vkPostNum].style.display = "none";
+        if(vkPostNum == vkSlide.length - 1){
+            vkPostNum = 0;
+        } else {
+            vkPostNum++; 
+        }
+        vkSlide[vkPostNum].style.display = "block";
+
+    });
+
+    btnVkprev.addEventListener('click', () =>{
+        vkSlide[vkPostNum].style.display = "none";
+        if(vkPostNum == 0){
+            vkPostNum = vkSlide.length - 1;
+        } else {
+            vkPostNum--; 
+        }
+        vkSlide[vkPostNum].style.display = "block";
+
+    });
+
+
+      // modal form
+
+    let btnModal = document.querySelectorAll(".btn-modal"),
+        modalForm = document.querySelector(".modal-frame-form"),
+        modalFrame = document.querySelector(".modal-frame"),
+        btnClose = document.querySelector(".close-btn");
+
+        modalFrame.style.display = "none";
+
+        btnClose.addEventListener('click', () => {
+            modalFrame.style.display = "none";
+        });
+
+        btnModal.forEach((item) => {
+            item.addEventListener('click', () => {
+                modalFrame.style.display = "block";
+            });
+        });
 });
 
