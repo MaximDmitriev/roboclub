@@ -250,6 +250,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 
+    // let i = 50;
+    // btnVknext.addEventListener('click', () =>{
+    //     vkSlide[vkPostNum].style.marginLeft = i + "px";
+    //     i+=50;
+
+    // });
+
     btnVkprev.addEventListener('click', () =>{
         vkSlide[vkPostNum].style.display = "none";
         if(vkPostNum == 0){
@@ -262,7 +269,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-      // modal form
+    //vk chat
+
+    VK.Widgets.CommunityMessages("vkMessage", 146293871, {
+        widgetPosition: "left",
+        welcomeScreen: 1
+
+    });
+
+
+
+    // modal form
 
     let btnModal = document.querySelectorAll(".btn-modal"),
         modalForm = document.querySelector(".modal-frame-form"),

@@ -911,6 +911,10 @@ nav .nav-menu:hover {
   height: 55rem;
   background-color: #f5f4f4;
 }
+.social-media .vk-post {
+  -webkit-animation: fade-in 1s;
+          animation: fade-in 1s;
+}
 .social-media .vk-prev {
   position: absolute;
   z-index: 5;
@@ -924,7 +928,7 @@ nav .nav-menu:hover {
   height: 100%;
 }
 .social-media .vk-prev:hover {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 .social-media .vk-prev-left {
   width: 30px;
@@ -956,7 +960,7 @@ nav .nav-menu:hover {
   right: 0;
 }
 .social-media .vk-next:hover {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 .social-media .vk-next-right {
   width: 30px;
@@ -978,7 +982,7 @@ nav .nav-menu:hover {
 .home-btn {
   position: fixed;
   right: 2%;
-  bottom: 10%;
+  bottom: 3%;
   z-index: 10;
   border-radius: 50%;
   border: 5px solid #ffffff;
@@ -992,6 +996,8 @@ nav .nav-menu:hover {
 .home-btn img {
   -webkit-transform: rotateZ(90deg);
           transform: rotateZ(90deg);
+  height: 47px;
+  width: 47px;
 }
 .up {
   -webkit-transform: translateY(-15%);

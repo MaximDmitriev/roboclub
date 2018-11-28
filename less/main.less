@@ -833,6 +833,8 @@ nav{
         // transform: translateY(-55%);
         &-post{
             // margin: 0 auto;
+            animation: fade-in 1s;
+
         }
         &-prev{
             position:absolute;
@@ -846,7 +848,7 @@ nav{
             transition: 1s;
             height: 100%;
             &:hover {
-                background-color: rgba(0,0,0,.2);
+                background-color: rgba(0,0,0,.1);
             }
             &-left{
                 width: 30px;
@@ -876,7 +878,7 @@ nav{
             // right: -6%;
             right: 0;
             &:hover {
-                background-color: rgba(0,0,0,.2);
+                background-color: rgba(0,0,0,.1);
             }
             &-right{
                 width: 30px;
@@ -900,7 +902,7 @@ nav{
 .home-btn{
     position: fixed;
     right: 2%;
-    bottom: 10%;
+    bottom: 3%;
     z-index: 10;
     border-radius: 50%;
     border: 5px solid #ffffff;
@@ -911,6 +913,8 @@ nav{
     }
     img{
         transform: rotateZ(90deg);
+        height: 47px;
+        width: 47px;
     }
 
 }
