@@ -118,6 +118,9 @@ body {
   display: -ms-flexbox;
   display: flex;
 }
+.nopad {
+  padding: 0;
+}
 .header {
   padding-top: 2rem;
   color: #383838;
@@ -840,6 +843,11 @@ nav .nav-menu:hover {
 .contacts-adress p {
   margin-top: 2rem;
   font-size: 1.8rem;
+}
+.contacts .outliner {
+  width: 100%;
+  height: 1rem;
+  background-color: #383838;
 }
 .home-btn {
   position: fixed;
