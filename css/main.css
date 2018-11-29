@@ -896,9 +896,10 @@ nav .nav-menu:hover {
 }
 .social-media {
   width: 100%;
-  height: 55rem;
+  height: 65rem;
 }
-.social-media .vk {
+.social-media .vk,
+.social-media .ig {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -911,11 +912,13 @@ nav .nav-menu:hover {
   height: 55rem;
   background-color: #f5f4f4;
 }
-.social-media .vk-post {
+.social-media .vk-post,
+.social-media .ig-post {
   -webkit-animation: fade-in 1s;
           animation: fade-in 1s;
 }
-.social-media .vk-prev {
+.social-media .vk-prev,
+.social-media .ig-prev {
   position: absolute;
   z-index: 5;
   cursor: pointer;
@@ -927,10 +930,12 @@ nav .nav-menu:hover {
   transition: 1s;
   height: 100%;
 }
-.social-media .vk-prev:hover {
+.social-media .vk-prev:hover,
+.social-media .ig-prev:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
-.social-media .vk-prev-left {
+.social-media .vk-prev-left,
+.social-media .ig-prev-left {
   width: 30px;
   height: 30px;
   background: url(../img/left-arrow.svg) center no-repeat;
@@ -944,10 +949,12 @@ nav .nav-menu:hover {
   -webkit-transition: 1s;
   transition: 1s;
 }
-.social-media .vk-prev-left:hover {
+.social-media .vk-prev-left:hover,
+.social-media .ig-prev-left:hover {
   opacity: 1;
 }
-.social-media .vk-next {
+.social-media .vk-next,
+.social-media .ig-next {
   position: absolute;
   z-index: 5;
   cursor: pointer;
@@ -959,10 +966,12 @@ nav .nav-menu:hover {
   height: 100%;
   right: 0;
 }
-.social-media .vk-next:hover {
+.social-media .vk-next:hover,
+.social-media .ig-next:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
-.social-media .vk-next-right {
+.social-media .vk-next-right,
+.social-media .ig-next-right {
   width: 30px;
   height: 30px;
   background: url(../img/right-arrow.svg) center no-repeat;
@@ -976,7 +985,8 @@ nav .nav-menu:hover {
   -webkit-transition: 1s;
   transition: 1s;
 }
-.social-media .vk-next-right:hover {
+.social-media .vk-next-right:hover,
+.social-media .ig-next-right:hover {
   opacity: 1;
 }
 .home-btn {
