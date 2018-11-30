@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         masterclass = document.querySelector(".masterclass"),
         program = document.querySelector(".program"),
         experts = document.querySelector(".experts"),
+        media = document.querySelector(".social-media"),
         contacts = document.querySelector(".contacts");
 
     homeBtn.addEventListener('click', () => {
@@ -38,6 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 case 2:
                 program.scrollIntoView({block:"start", behavior: "smooth"});
+                break;
+
+                case 3:
+                media.scrollIntoView({block:"start", behavior: "smooth"});
                 break;
 
                 case 4:
