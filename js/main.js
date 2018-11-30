@@ -343,11 +343,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         btnClose.addEventListener('click', () => {
             modalFrame.style.display = "none";
+            document.body.style.overflow = "";
+            homeBtn.style.display = "block";
+
         });
 
         btnModal.forEach((item) => {
             item.addEventListener('click', () => {
                 modalFrame.style.display = "block";
+                document.body.style.overflow = "hidden";
+                homeBtn.style.display = "none";
+
             });
         });
 });

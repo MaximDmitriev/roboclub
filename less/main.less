@@ -305,6 +305,14 @@ nav{
     text-transform: uppercase;
     text-align: center;
     margin: 4.5rem 0 10rem 0;
+    &::after{
+        content: "";
+        display: block;
+        height: 2px;
+        width: 20%;
+        margin: 0 auto;
+        background-color: @main-color;  
+    }
 }
 .masterclass{
     height: 60rem;
@@ -793,24 +801,52 @@ nav{
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        align-items: center;
         position: absolute;
         // z-index: 5;
         top: 30%;
         left: 50%;
         transform: translateX(-50%);
         // margin: 0 auto;
-        width: 27rem;
-        height: 27rem;
+        width: 30rem;
+        height: 40rem;
         background-color: @bc-light;
-        border: 1px solid @text-color;
+        border: 1px solid @main-color;
+        font-size: 1.8rem;
+        &-text{
+            font-size: 1.2rem;
+            padding: 1rem;
+        }
+        &-title{
+            margin-top: 2rem;
+            .bold();
+        }
+        &-input{
+            width: 220px;
+            height: 35px;
+            padding-left: 1rem;
+        }
+        &-btn{
+            background-color: @btn-color;
+            color: @bc-light;
+            width: 220px;
+            height: 35px;
+            font-size: 1.8rem;
+            &:hover{
+                background-color: @bc-light;
+                color: @text-color;
+                outline: 1px solid @btn-color;
+            }
+        }
+        
         .close-btn{
             position: absolute;
-            top: -50px;
-            right: -50px;
+            top: 2px;
+            right: 2px;
             background-color: @bc-light;
             border-radius: 50%;
-            height: 40px;
-            width: 40px;
+            height: 30px;
+            width: 30px;
             text-align: center;
             img{
                 width: 60%;
