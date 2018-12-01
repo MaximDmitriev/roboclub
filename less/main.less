@@ -319,30 +319,91 @@ nav{
     background-color: @bc-dark;
     &-gift{
         display: flex;
+        position: relative;
         flex-direction: column;
         height: 40rem;
         align-items: center;
-        h2{
-            color: @text-color;
-            .reg();
-            font-size: 2.5rem;
-            text-transform: uppercase;
-            text-align: center;
-            margin-top: 2.5rem;
+        perspective: 1000px;
+        &:hover{
+            .masterclass-gift-front{
+                transform: rotateY(180deg);
+            }
+            .masterclass-gift-back{
+                transform: rotateY(360deg);
+            }
+        }       
+        // h2{
+        //     color: @text-color;
+        //     .reg();
+        //     font-size: 2.5rem;
+        //     text-transform: uppercase;
+        //     text-align: center;
+        //     margin-top: 2.5rem;
 
-        }
-        img{
-            width: 10rem;
-        }
-        p{
+        // }
+        // img{
+        //     width: 10rem;
+        // }
+        // p{
+        //     position: absolute;
+        //     top: 25rem;
+        //     .reg();
+        //     color: @text-color;
+        //     font-size: 1.8rem;
+        //     text-align: center;
+        // }
+        &-front{
             position: absolute;
-            top: 25rem;
-            .reg();
-            color: @text-color;
-            font-size: 1.8rem;
-            text-align: center;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            height: 40rem;
+            align-items: center;
+            transition: 1s;
+            backface-visibility: hidden;
+            h2{
+                color: @text-color;
+                .reg();
+                font-size: 2.5rem;
+                text-transform: uppercase;
+                text-align: center;
+                margin-top: 2.5rem;
+
+            }
+            img{
+                width: 10rem;
+            }
+            p{
+                position: absolute;
+                top: 25rem;
+                .reg();
+                color: @text-color;
+                font-size: 1.8rem;
+                text-align: center;
+            }            
+        }
+        &-back{
+            display: flex;
+            justify-content: center;
+            background-color: #fff;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            transition: 1s;
+            backface-visibility: hidden;
+            transform: rotateY(180deg);
+            img{
+                height: 100%;
+                margin: 0 auto;
+            }
         }
     }
+
 }
 
 .program{

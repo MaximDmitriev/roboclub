@@ -344,6 +344,7 @@ nav .nav-menu:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -352,8 +353,40 @@ nav .nav-menu:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
 }
-.masterclass-gift h2 {
+.masterclass-gift:hover .masterclass-gift-front {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.masterclass-gift:hover .masterclass-gift-back {
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+}
+.masterclass-gift-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 40rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.masterclass-gift-front h2 {
   color: #383838;
   font-family: 'ProximaNova_reg', sans-serif;
   font-size: 2.5rem;
@@ -361,16 +394,40 @@ nav .nav-menu:hover {
   text-align: center;
   margin-top: 2.5rem;
 }
-.masterclass-gift img {
+.masterclass-gift-front img {
   width: 10rem;
 }
-.masterclass-gift p {
+.masterclass-gift-front p {
   position: absolute;
   top: 25rem;
   font-family: 'ProximaNova_reg', sans-serif;
   color: #383838;
   font-size: 1.8rem;
   text-align: center;
+}
+.masterclass-gift-back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.masterclass-gift-back img {
+  height: 100%;
+  margin: 0 auto;
 }
 .program {
   position: relative;
