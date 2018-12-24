@@ -319,12 +319,20 @@ document.addEventListener('DOMContentLoaded', () => {
         request.addEventListener('readystatechange', () => {
             if (request.readyState == 4 && request.status == 200){
                 let data = JSON.parse(request.response);
-                // console.log(data.html);
                 divIg.style.opacity = 0;
+
                 setTimeout(() => {
+
                     
                     divIg.innerHTML = data.html;
                     instgrm.Embeds.process();
+
+                    // let frame = divIg.querySelector("iframe");
+                    // frame.addEventListener('load', () => {
+                    //     frame.style.height = "444px";
+                    //     console.log(frame);
+                    // });
+
                     setTimeout(() => {divIg.style.opacity = 1;}, 600);
                 }, 500);
             }
