@@ -265,11 +265,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //vk chat
 
-    VK.Widgets.CommunityMessages("vkMessage", 146293871, {
+    let vk = VK.Widgets.CommunityMessages("vkMessage", 146293871, {
         widgetPosition: "left",
-        welcomeScreen: 1
-
+        welcomeScreen: 1,
+        disableButtonTooltip: 1,
+        
     });
+
+    // vk.stopTitleAnimation();
 
     // ig
 

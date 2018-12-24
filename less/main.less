@@ -931,7 +931,26 @@ nav{
     }
 }
 
-
+footer{
+    width: 100%;
+    height: 12rem;
+    margin-top: 4rem;
+    background-color: @text-color;
+    color: @bc-light;
+    .footer-adress, .footer-phone, .footer-email, .footer-social{
+        display: flex;
+        flex-direction: column;
+        h3{
+            margin-top: 5px;
+            .bold();
+            font-size: 1.8rem;
+        }
+        p{
+            margin-top: 7px;
+            font-size: 1.6rem;
+        }
+    }
+}
 
 .social-media{
     width: 100%;
