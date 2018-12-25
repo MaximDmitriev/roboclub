@@ -118,7 +118,9 @@ body{
         display: flex;
         .place{
             display: inline-block;
+            // text-align: justify;
             padding-right: 1.4rem;
+            padding-top: 1.4rem;
         }
         .head-adress{
             display: inline-block;
@@ -335,26 +337,6 @@ nav{
                 transform: rotateY(360deg);
             }
         }       
-        // h2{
-        //     color: @text-color;
-        //     .reg();
-        //     font-size: 2.5rem;
-        //     text-transform: uppercase;
-        //     text-align: center;
-        //     margin-top: 2.5rem;
-
-        // }
-        // img{
-        //     width: 10rem;
-        // }
-        // p{
-        //     position: absolute;
-        //     top: 25rem;
-        //     .reg();
-        //     color: @text-color;
-        //     font-size: 1.8rem;
-        //     text-align: center;
-        // }
         &-front{
             position: absolute;
             width: 100%;
@@ -378,6 +360,7 @@ nav{
             }
             img{
                 width: 10rem;
+                // width: 5rem;
             }
             p{
                 position: absolute;
@@ -401,7 +384,8 @@ nav{
             backface-visibility: hidden;
             transform: rotateY(180deg);
             img{
-                height: 100%;
+                // height: 100%;
+                width: 100%;
                 margin: 0 auto;
             }
         }
@@ -1073,4 +1057,63 @@ footer{
 .up{
     transform: translateY(-15%);
     transition: 0.5s;
+}
+
+@media (max-width: 991px) {
+    // html{
+    //     font-size: 8px;    
+    // }
+    .nav{
+        display: none;
+    }
+    
+    .main{
+        height: 62rem;
+        h1{
+            font-size: 3rem;
+            margin-top: 1rem;
+        }
+        .subtitle{
+            font-size: 2rem;
+        }
+        &-text{
+            &-info{
+                p{
+                    font-size: 1.8rem;
+                }
+            }
+        }
+        &-request{
+            h2{
+                font-size: 2rem;
+            }
+        }
+        &-btn{
+            width: 20rem;
+            font-size: 1.8rem;
+        }
+    }
+
+    .common-subtitle{
+        font-size: 3rem;
+        margin: 3.5rem 0 7rem 0;
+    }
+
+    .masterclass{
+        height: 60rem;
+        &-gift{   
+            &-front{
+                h2{
+                    font-size: 2rem;
+                }
+                img{
+                    width: 8rem;
+                }
+                p{
+                    font-size: 1.6rem;
+                }            
+            }
+        }
+    }
+
 }

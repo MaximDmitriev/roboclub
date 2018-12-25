@@ -134,6 +134,7 @@ body {
 .header-location .place {
   display: inline-block;
   padding-right: 1.4rem;
+  padding-top: 1.4rem;
 }
 .header-location .head-adress {
   display: inline-block;
@@ -430,7 +431,7 @@ nav .nav-menu:hover {
           transform: rotateY(180deg);
 }
 .masterclass-gift-back img {
-  height: 100%;
+  width: 100%;
   margin: 0 auto;
 }
 .program {
@@ -1172,4 +1173,45 @@ footer .footer-social p {
           transform: translateY(-15%);
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+@media (max-width: 991px) {
+  .nav {
+    display: none;
+  }
+  .main {
+    height: 62rem;
+  }
+  .main h1 {
+    font-size: 3rem;
+    margin-top: 1rem;
+  }
+  .main .subtitle {
+    font-size: 2rem;
+  }
+  .main-text-info p {
+    font-size: 1.8rem;
+  }
+  .main-request h2 {
+    font-size: 2rem;
+  }
+  .main-btn {
+    width: 20rem;
+    font-size: 1.8rem;
+  }
+  .common-subtitle {
+    font-size: 3rem;
+    margin: 3.5rem 0 7rem 0;
+  }
+  .masterclass {
+    height: 60rem;
+  }
+  .masterclass-gift-front h2 {
+    font-size: 2rem;
+  }
+  .masterclass-gift-front img {
+    width: 8rem;
+  }
+  .masterclass-gift-front p {
+    font-size: 1.6rem;
+  }
 }
