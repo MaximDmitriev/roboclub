@@ -171,7 +171,9 @@ body {
 }
 .header-adress {
   font-size: 1.4rem;
-  text-align: right;
+  text-align: left;
+  margin-bottom: 0;
+  margin-left: auto;
 }
 .header-adress span {
   font-size: 2.5rem;
@@ -191,6 +193,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: auto;
+  margin-bottom: 5px;
 }
 .social-icon {
   position: relative;
@@ -438,6 +442,9 @@ nav .nav-menu:hover {
 .program .algoritm {
   display: none;
 }
+.program .algoritm .program-decs-title {
+  width: 95%;
+}
 .program .electric {
   display: none;
 }
@@ -557,6 +564,7 @@ nav .nav-menu:hover {
 .program-wrapper .program-decs-text p {
   width: 80%;
   text-align: justify;
+  line-height: 1.9rem;
 }
 .program-wrapper .program-visual {
   height: 98%;
@@ -736,18 +744,16 @@ nav .nav-menu:hover {
   display: inline-block;
   position: absolute;
   cursor: pointer;
-  width: 3rem;
-  height: 3rem;
   top: 65%;
-  left: 45%;
+  left: 40%;
 }
 .experts .experts-btn-prev img {
   width: 5rem;
   height: 5rem;
 }
 .experts .experts-btn-prev:hover {
-  -webkit-transform: scale(1.2) translateX(-30%);
-          transform: scale(1.2) translateX(-30%);
+  -webkit-transform: scale(1.1) translateX(-20%);
+          transform: scale(1.1) translateX(-20%);
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -755,10 +761,9 @@ nav .nav-menu:hover {
   display: inline-block;
   position: absolute;
   cursor: pointer;
-  background-color: #fff;
   border-radius: 50%;
   top: 65%;
-  right: 45%;
+  right: 40%;
 }
 .experts .experts-btn-next img {
   width: 5rem;
@@ -791,7 +796,7 @@ nav .nav-menu:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 .faq-item .row-body {
   display: none;
@@ -820,6 +825,7 @@ nav .nav-menu:hover {
 }
 .faq-item .question-text {
   margin: 0 2rem;
+  line-height: 2.2rem;
 }
 .faq-item .question-header {
   font-family: 'ProximaNova_bold', sans-serif;
@@ -1024,6 +1030,12 @@ footer .footer-social {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+footer .footer-adress .social,
+footer .footer-phone .social,
+footer .footer-email .social,
+footer .footer-social .social {
+  margin-left: 0;
 }
 footer .footer-adress h3,
 footer .footer-phone h3,

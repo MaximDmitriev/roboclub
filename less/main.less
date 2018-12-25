@@ -153,7 +153,9 @@ body{
 
     &-adress{
         font-size: 1.4rem;
-        text-align: right;
+        text-align: left;
+        margin-bottom: 0;
+        margin-left: auto;
         span{
             font-size: 2.5rem;
             .bold();
@@ -175,7 +177,8 @@ body{
 
 .social {
     display: flex;
-
+    margin-left: auto;
+    margin-bottom: 5px;
     &-icon {
         position: relative;
         margin-right: 0.4rem;
@@ -413,6 +416,9 @@ nav{
     background-color: @bc-light;
     .algoritm{
         display: none;
+        .program-decs-title{
+            width: 95%;
+        }
     }
     .electric{
         display: none;
@@ -519,6 +525,7 @@ nav{
                 p{
                     width: 80%;
                     text-align: justify;
+                    line-height: 1.9rem; ///////
                 }
             }
         }
@@ -698,16 +705,16 @@ nav{
         display: inline-block;
         position: absolute;
         cursor: pointer;
-        width: 3rem;
-        height: 3rem;
+        // width: 3rem;
+        // height: 3rem;
         top: 65%;
-        left: 45%;
+        left: 40%;
         img{
             width: 5rem;
             height: 5rem;
         }
         &:hover{
-            transform: scale(1.2) translateX(-30%);
+            transform: scale(1.1) translateX(-20%);
             transition: 0.3s;
         }
     }
@@ -715,10 +722,10 @@ nav{
         display: inline-block;
         position: absolute;
         cursor: pointer;
-        background-color: #fff;
+        // background-color: #fff;
         border-radius: 50%;
         top: 65%;
-        right: 45%;
+        right: 40%;
         img{
             width: 5rem;
             height: 5rem;
@@ -740,7 +747,7 @@ nav{
         .row-head{
             display: flex;
             align-items: center;
-            margin-top: 2rem;
+            margin-top: 1rem;
         }
         .row-body{
             display: none;
@@ -763,6 +770,7 @@ nav{
             }
             &-text{
                 margin: 0 2rem;
+                line-height: 2.2rem;
             }
             &-header{
                 .bold();
@@ -940,6 +948,9 @@ footer{
     .footer-adress, .footer-phone, .footer-email, .footer-social{
         display: flex;
         flex-direction: column;
+        .social{
+            margin-left: 0;
+        }
         h3{
             margin-top: 5px;
             .bold();
