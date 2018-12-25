@@ -547,12 +547,15 @@ nav{
                     align-items: center;
                     margin-top: 2rem;
                     .num{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
                         width: 4.3rem;
                         height: 4.3rem;
-                        text-align: center;
+                        // text-align: center;
                         margin-left: 1rem;
                         margin-right: 1rem;
-                        padding: 0;
+                        // padding: 0;
                         .bold();
                         font-size: 3rem;
                         color: @bc-light;
@@ -1066,7 +1069,7 @@ footer{
     .nav{
         display: none;
     }
-    
+
     .main{
         height: 62rem;
         h1{
@@ -1113,6 +1116,105 @@ footer{
                     font-size: 1.6rem;
                 }            
             }
+        }
+    }
+    .program{
+        height: 67rem;
+        &-wrapper{
+            .program-decs{
+                font-size: 1.3rem;
+                h2{
+                    font-size: 2rem;
+                }
+                &-title{
+                    font-size: 1.4rem;
+                }
+            }
+            .program-visual{
+                height: 98%;
+                .result{
+                    font-size: 2rem;
+                }
+                .final{
+                    p{
+                        font-size: 1.8rem;
+                    }
+                    h3{
+                        font-size: 1.6rem;
+                    }
+                    .item{
+                        .num{
+                            width: 3rem;
+                            height: 3rem;
+                            margin-right: 0;
+                            font-size: 1.8rem;
+                        }
+                        .txt{
+                            font-size: 1.4rem;
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .interest{
+        height: 36rem;
+        h1{
+            font-size: 3rem;
+            margin-top: 6rem;
+        }
+        p{
+            margin-top: 3rem;
+            font-size: 2rem;
+        }
+        &-form{
+            margin-top: 7rem;
+            input{
+                width:20rem;
+                margin-right: 1rem;
+                padding-left: 1rem;
+                font-size: 1.6rem;
+            }
+            button{
+                width:20rem;
+                font-size: 1.6rem;
+            }
+        }
+        
+    }
+
+    .reasons{
+        height: 60rem;
+        &-item{
+            img{
+                width: 9rem;
+            }
+            p{
+                font-size: 1.6rem;
+                span{
+                    font-size: 2rem;
+                    line-height: 2rem;
+                }
+            }
+        }
+    }
+
+    .faq{
+        height: 75rem;
+    }
+
+    .experts{
+        height: 70rem;
+        .experts-btn-prev, .experts-btn-next{
+            top: 80%;
+        }
+    }
+    .social-media{
+        height: 70rem;
+        .ig-wrap{
+            display: none;
         }
     }
 

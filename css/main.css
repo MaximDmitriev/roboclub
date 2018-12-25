@@ -604,12 +604,19 @@ nav .nav-menu:hover {
   margin-top: 2rem;
 }
 .program-wrapper .program-visual .final .item .num {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 4.3rem;
   height: 4.3rem;
-  text-align: center;
   margin-left: 1rem;
   margin-right: 1rem;
-  padding: 0;
   font-family: 'ProximaNova_bold', sans-serif;
   font-size: 3rem;
   color: #ffffff;
@@ -1213,5 +1220,92 @@ footer .footer-social p {
   }
   .masterclass-gift-front p {
     font-size: 1.6rem;
+  }
+  .program {
+    height: 67rem;
+  }
+  .program-wrapper .program-decs {
+    font-size: 1.3rem;
+  }
+  .program-wrapper .program-decs h2 {
+    font-size: 2rem;
+  }
+  .program-wrapper .program-decs-title {
+    font-size: 1.4rem;
+  }
+  .program-wrapper .program-visual {
+    height: 98%;
+  }
+  .program-wrapper .program-visual .result {
+    font-size: 2rem;
+  }
+  .program-wrapper .program-visual .final p {
+    font-size: 1.8rem;
+  }
+  .program-wrapper .program-visual .final h3 {
+    font-size: 1.6rem;
+  }
+  .program-wrapper .program-visual .final .item .num {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 0;
+    font-size: 1.8rem;
+  }
+  .program-wrapper .program-visual .final .item .txt {
+    font-size: 1.4rem;
+    text-align: left;
+  }
+  .interest {
+    height: 36rem;
+  }
+  .interest h1 {
+    font-size: 3rem;
+    margin-top: 6rem;
+  }
+  .interest p {
+    margin-top: 3rem;
+    font-size: 2rem;
+  }
+  .interest-form {
+    margin-top: 7rem;
+  }
+  .interest-form input {
+    width: 20rem;
+    margin-right: 1rem;
+    padding-left: 1rem;
+    font-size: 1.6rem;
+  }
+  .interest-form button {
+    width: 20rem;
+    font-size: 1.6rem;
+  }
+  .reasons {
+    height: 60rem;
+  }
+  .reasons-item img {
+    width: 9rem;
+  }
+  .reasons-item p {
+    font-size: 1.6rem;
+  }
+  .reasons-item p span {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  .faq {
+    height: 75rem;
+  }
+  .experts {
+    height: 70rem;
+  }
+  .experts .experts-btn-prev,
+  .experts .experts-btn-next {
+    top: 80%;
+  }
+  .social-media {
+    height: 70rem;
+  }
+  .social-media .ig-wrap {
+    display: none;
   }
 }
