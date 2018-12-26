@@ -1218,4 +1218,192 @@ footer{
         }
     }
 
+    .form{
+        &-wrapper{
+            p{
+                font-size: 2.2rem;
+                margin-top: 3rem;
+            }
+            button{
+                width: 22rem;
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .contacts{
+        height: 58rem;
+        .map{
+            height: 29rem;
+        }
+        &-adress{
+            display: flex;
+            flex-wrap: wrap;
+            height: 12rem;
+            padding: 2rem;
+            h3{
+                display: inline-block;
+                width: 100%;
+            }
+            p{
+                margin-top: 1rem;
+                margin-right: 3rem;
+            }
+        }
+        .outliner{
+            display: none;
+        }
+    }
+
+    footer{
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    html{
+        font-size: 8px;    
+    }
+
+    .header{
+        &-location{
+            .place{
+                display: none;
+            }
+            .head-adress{
+                font-size: 1.8rem;
+                margin-left: auto;
+                text-align: right;
+                p{
+                    margin: 0;
+                }
+            }
+        }
+        &-desc{
+            align-items: center;
+            p{
+                font-size: 2rem;
+                margin-left: 0.6rem;
+            }
+        }
+        &-contacts{
+            align-items: flex-end;
+            height: 6rem;
+        }
+        &-request{
+            font-size: 1.8rem;
+        } 
+    }
+
+    .social {
+        &-icon {
+            a{
+                top: 0.6rem;
+                left:0.6rem;
+            }
+            .instagram{
+                left: 0.9rem;
+            }
+        }
+    }
+
+    .main{
+        height: 72rem;
+        h1{
+            margin-left: 0;
+        }
+        .subtitle{
+            font-size: 3rem;
+            margin-left: 0;
+        }
+        h2{
+            .bold();
+            font-size: 3rem;
+            color: @bc-light;
+        }
+        &-text{
+            margin-left: 0rem;
+        }
+        &-request{
+            height: 100%;
+            h2{
+                text-align: right;
+                margin-top: 30rem;
+                margin-bottom: 2rem;
+                font-size: 2.5rem;
+            }
+        }
+        &-btn{
+            width: 23rem;
+            margin-right: 3.5rem;
+        }
+    }
+
+    .program{
+        height: 105rem;
+        .algoritm{
+            .program-decs-title{
+                width: 85%;
+            }
+        }    
+        .prev{
+            width: 50px;
+            .arrow-left{
+                left: 23%;
+            }
+        }
+        .next {
+            width: 50px;
+            .arrow-right{
+                left: 70%;
+            }
+        }    
+        &-wrapper{
+            .program-decs{
+                font-size: 1.6rem;
+                h2{
+                    font-size: 3rem;
+                }
+                h3{
+                    font-size: 2.3rem;
+                }
+                &-title{
+                    font-size: 2rem;
+                }
+                &-text{
+                    p{
+                        line-height: 1.9rem; ///////
+                    }
+                }
+            }
+            .program-visual{
+                .result{
+                    display: none;
+                }
+                .final{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .interest{
+        height: 42rem;
+        &-form{
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 4rem;
+            input{
+                margin-left: 50%;
+                margin-bottom: 2rem;
+                transform: translateX(-50%);
+            }
+            button{
+                margin-left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        
+    }
+
 }

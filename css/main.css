@@ -1308,4 +1308,174 @@ footer .footer-social p {
   .social-media .ig-wrap {
     display: none;
   }
+  .form-wrapper p {
+    font-size: 2.2rem;
+    margin-top: 3rem;
+  }
+  .form-wrapper button {
+    width: 22rem;
+    font-size: 2rem;
+  }
+  .contacts {
+    height: 58rem;
+  }
+  .contacts .map {
+    height: 29rem;
+  }
+  .contacts-adress {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: 12rem;
+    padding: 2rem;
+  }
+  .contacts-adress h3 {
+    display: inline-block;
+    width: 100%;
+  }
+  .contacts-adress p {
+    margin-top: 1rem;
+    margin-right: 3rem;
+  }
+  .contacts .outliner {
+    display: none;
+  }
+  footer {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  html {
+    font-size: 8px;
+  }
+  .header-location .place {
+    display: none;
+  }
+  .header-location .head-adress {
+    font-size: 1.8rem;
+    margin-left: auto;
+    text-align: right;
+  }
+  .header-location .head-adress p {
+    margin: 0;
+  }
+  .header-desc {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header-desc p {
+    font-size: 2rem;
+    margin-left: 0.6rem;
+  }
+  .header-contacts {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    height: 6rem;
+  }
+  .header-request {
+    font-size: 1.8rem;
+  }
+  .social-icon a {
+    top: 0.6rem;
+    left: 0.6rem;
+  }
+  .social-icon .instagram {
+    left: 0.9rem;
+  }
+  .main {
+    height: 72rem;
+  }
+  .main h1 {
+    margin-left: 0;
+  }
+  .main .subtitle {
+    font-size: 3rem;
+    margin-left: 0;
+  }
+  .main h2 {
+    font-family: 'ProximaNova_bold', sans-serif;
+    font-size: 3rem;
+    color: #ffffff;
+  }
+  .main-text {
+    margin-left: 0rem;
+  }
+  .main-request {
+    height: 100%;
+  }
+  .main-request h2 {
+    text-align: right;
+    margin-top: 30rem;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+  }
+  .main-btn {
+    width: 23rem;
+    margin-right: 3.5rem;
+  }
+  .program {
+    height: 105rem;
+  }
+  .program .algoritm .program-decs-title {
+    width: 85%;
+  }
+  .program .prev {
+    width: 50px;
+  }
+  .program .prev .arrow-left {
+    left: 23%;
+  }
+  .program .next {
+    width: 50px;
+  }
+  .program .next .arrow-right {
+    left: 70%;
+  }
+  .program-wrapper .program-decs {
+    font-size: 1.6rem;
+  }
+  .program-wrapper .program-decs h2 {
+    font-size: 3rem;
+  }
+  .program-wrapper .program-decs h3 {
+    font-size: 2.3rem;
+  }
+  .program-wrapper .program-decs-title {
+    font-size: 2rem;
+  }
+  .program-wrapper .program-decs-text p {
+    line-height: 1.9rem;
+  }
+  .program-wrapper .program-visual .result {
+    display: none;
+  }
+  .program-wrapper .program-visual .final {
+    display: none;
+  }
+  .interest {
+    height: 42rem;
+  }
+  .interest-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 4rem;
+  }
+  .interest-form input {
+    margin-left: 50%;
+    margin-bottom: 2rem;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .interest-form button {
+    margin-left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
 }
