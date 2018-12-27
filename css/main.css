@@ -1478,4 +1478,25 @@ footer .footer-social p {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
   }
+  .reasons {
+    height: 90rem;
+  }
+  .reasons-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .experts-slide {
+    width: 68rem;
+  }
+  .experts-slide-img img {
+    width: 21rem;
+  }
+  .contacts-adress {
+    height: 12rem;
+  }
+  .contacts-adress p {
+    margin-right: 1.5rem;
+  }
 }
