@@ -1394,11 +1394,15 @@ footer{
             flex-wrap: wrap;
             margin-top: 4rem;
             input{
+                font-size: 1.8rem;
+                width: 26rem;
                 margin-left: 50%;
                 margin-bottom: 2rem;
                 transform: translateX(-50%);
             }
             button{
+                font-size: 1.8rem;
+                width: 20.5rem;
                 margin-left: 50%;
                 transform: translateX(-50%);
             }
@@ -1424,27 +1428,295 @@ footer{
     }
 
     .contacts{
-        // height: 58rem;
-        // .map{
-        //     height: 29rem;
-        // }
         &-adress{
-            // display: flex;
-            // flex-wrap: wrap;
             height: 12rem;
-            // padding: 2rem;
-            // h3{
-            //     display: inline-block;
-            //     width: 100%;
-            // }
             p{
-                // margin-top: 1rem;
                 margin-right: 1.5rem;
             }
         }
-        // .outliner{
-        //     display: none;
-        // }
+    }
+}
+
+@media (max-width: 575px) {
+    .header{
+        height: 33rem;
+        &-location{
+            .head-adress{
+                text-align: center;
+                width: 100%;
+                margin: 2rem 0;
+            }
+        }
+        &-desc{
+            align-items: flex-start;
+            p{
+                font-size: 1.8rem;
+                margin-left: 0.6rem;
+            }
+        }
+        &-adress{
+            margin-left: 2rem;
+            margin-right: 1rem;
+        }
+        &-request{
+            margin: 2rem 0;
+            margin-left: 40%;
+            transform: translateX(-33%);
+            border-bottom: 0.3rem solid @main-color;
+        } 
+    }
+
+    .main{
+        h1{
+            font-size: 2.5rem;
+            margin-left: -1rem;
+        }
+        .subtitle{
+            font-size: 2rem;
+            margin-left: -1rem;
+        }
+        h2{
+            font-size: 2rem;
+            margin-left: 1rem;
+        }
+        &-text{
+            margin-left: -1.7rem;
+            &-info{
+                margin-left: 1rem;
+            }
+        }
+        &-request{
+            h2{
+                display: none;
+            }
+        }
+        &-btn{
+            width: 20rem;
+            margin: 2rem 0 0;
+        }
+    }
+
+    .masterclass{
+        display: none;
+    }
+
+    .program{
+        height: 110rem;
+        .program-decs-title{
+            text-align: left;
+        }
+        .algoritm{
+            .program-decs-title{
+                width: 90%;
+            }
+        }        
+        &-wrapper{
+            .program-decs{
+                h2{
+                    font-size: 2.5rem;
+                }
+            }
+        }
+    }
+
+    .interest{
+        height: 48rem;
+    }
+
+    .reasons{
+        height: 100rem;
+        &-item{
+            flex-direction: row;
+            &.rev{
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                margin-left: 1.8rem;
+            }
+        }
+    }
+
+    .faq{
+        height: 85rem;
+        &-item{
+            .question{
+                height: 7rem;
+                // animation: none;
+                &:nth-child(1){
+                    height: 10rem;
+                }
+                &.full{
+                    height: 22rem;
+                    // animation: none;
+                    &:nth-child(1){
+                        height: 26rem;
+                    }
+                }
+                &-btn{
+                    // animation: none;
+                    &.fwd{
+                        // animation: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .experts{
+        height: 110rem;
+        &-slide{
+            width: 90%;
+            flex-direction: column;
+            height: 78rem;
+        
+            &-desc{
+                h2{
+                    text-align: center;
+                }
+                p{
+                    margin-left: 2rem;
+                }
+            }
+            &-img{
+                margin: 2rem 0;
+            }
+        }
+        .experts-btn-prev{
+            top: 90%;
+            left: 35%;
+            &:hover{
+                transform: none;
+            }
+        }
+        .experts-btn-next{
+            top: 90%;
+            right: 35%;
+            &:hover{
+                transform: none;
+            }
+        }
+    }
+
+    .social-media{
+        height: 87rem;
+        .vk, .ig{
+            height: 75rem;
+            &-prev{
+                &:hover {
+                    background-color: rgba(0,0,0,.0);
+                }
+                &-left{
+                    top: 80%;
+                    background-color: @main-color;
+                    border-radius: 50%;
+                    left: 30%;
+                    opacity: 0.4;
+                    &:hover{
+                        opacity: 0;
+                    }
+                }
+            }
+            &-next {
+                &:hover {
+                    background-color: rgba(0,0,0,.0);
+                }
+                &-right{
+                    top: 80%;
+                    background-color: @main-color;
+                    border-radius: 50%;
+                    left: 70%;
+                    opacity: 0.4;
+                    &:hover{
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .form{
+        height: 46rem;
+    }
+
+    .partner-logo{
+        margin-top: 3rem;
+    }
+    
+    .contacts{
+        display: none;
+    }
+
+    footer{
+        display: flex;
+        height: 32rem;
+        margin-top: 0;
+        .footer-adress{
+            h3{
+                margin-top: 2rem;
+            }
+        }
+        .footer-social{
+            h3{
+                display: none;
+            }
+        }
+    }
+    .home-btn{
+        right: 7%;
+    }
+}
+@media (max-width: 340px) {
+    .header{
+        height: 34rem;
+        &-adress{
+            margin-right: 2rem;
+        }
+        &-request{
+            margin-left: 30%;
+            transform: translateX(-20%);
+        } 
+    }
+
+    .main{
+        height: 76rem;
+    }
+
+    .program{
+        height: 120rem;
+    }
+
+    .reasons{
+        height: 105rem;
+    }
+
+    .faq{
+        height: 90rem;
+        &-item{
+            .question{
+                height: 10rem;
+                &.full{
+                    height: 26rem;
+                }
+            }
+        }
+    
+    }
+
+    .experts{
+        &-slide{
+            height: 85rem;
+        }
+        .experts-btn-next{
+            top: 92%;
+            right: 30%;
+        }
+        .experts-btn-prev{
+            top: 92%;
+            left: 30%;
+        }
+    }
+
+    .social-media{
+        height: 90rem;
     }
 
 }
