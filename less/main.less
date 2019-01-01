@@ -88,7 +88,6 @@
 
 html{
     font-size: 10px;
-    // font-family: .reg(), Arial, Tahoma, sans-serif;
     
 }
 
@@ -103,13 +102,10 @@ body{
     padding: 0;
 }
 
-// Typography
-
-
-
 // header
 
 .header{
+    display: flex;
     padding-top: 2rem;
     color: @text-color;
     line-height: 2rem;
@@ -118,7 +114,6 @@ body{
         display: flex;
         .place{
             display: inline-block;
-            // text-align: justify;
             padding-right: 1.4rem;
             padding-top: 1.4rem;
         }
@@ -126,7 +121,6 @@ body{
             display: inline-block;
             font-size: 1.4rem;
             span{
-                // font-weight: 600;
                 .bold();
             }
             p{
@@ -221,7 +215,7 @@ nav{
 // main
 
 .main{
-    height: 72rem;
+    display: flex;
     width: 100%;
     background-image: url("../img/main_img.jpg");
     background-repeat: no-repeat;
@@ -231,7 +225,6 @@ nav{
         .bold();
         color: @bc-light;
         font-size: 5rem;
-        // font-weight: 900;
         text-transform: uppercase;
         text-align: left;
         margin-top: 2rem;
@@ -320,6 +313,7 @@ nav{
     }
 }
 .masterclass{
+    display: none;
     height: 60rem;
     background-color: @bc-dark;
     &-gift{
@@ -360,7 +354,6 @@ nav{
             }
             img{
                 width: 10rem;
-                // width: 5rem;
             }
             p{
                 position: absolute;
@@ -384,7 +377,6 @@ nav{
             backface-visibility: hidden;
             transform: rotateY(180deg);
             img{
-                // height: 100%;
                 width: 100%;
                 margin: 0 auto;
             }
@@ -394,9 +386,11 @@ nav{
 }
 
 .program{
+    display: flex;
     position: relative;
     width: 100%;
-    height: 72rem;
+    margin-top: 3rem;
+    padding-bottom: 2rem;
     background-color: @bc-light;
     .algoritm{
         display: none;
@@ -552,10 +546,8 @@ nav{
                         justify-content: center;
                         width: 4.3rem;
                         height: 4.3rem;
-                        // text-align: center;
                         margin-left: 1rem;
                         margin-right: 1rem;
-                        // padding: 0;
                         .bold();
                         font-size: 3rem;
                         color: @bc-light;
@@ -574,7 +566,6 @@ nav{
 }
 //first form
 .interest{
-    height: 42rem;
     width: 100%;
     background-image: url("../img/interes_img.jpg");
     background-repeat: no-repeat;
@@ -598,6 +589,7 @@ nav{
     &-form{
         margin-top: 9rem;
         text-align: center;
+        padding-bottom: 6rem;
         input{
             width:22rem;
             height: 5rem;
@@ -625,8 +617,9 @@ nav{
 }
 
 .reasons{
+    display: flex;
+    padding-bottom: 3rem;
     width: 100%;
-    height: 80rem;
     background-color: @bc-dark;
     &-item{
         display: flex;
@@ -652,8 +645,10 @@ nav{
 }
 
 .experts{
+    display: flex;
     position: relative;
     height: 93rem;
+    padding-bottom: 25rem;
     width: 100%;
     background-image: url("../img/experts_bgnd.jpg");
     background-repeat: no-repeat;
@@ -663,12 +658,14 @@ nav{
         display: none;
         align-items: center;
         width: 70rem;
-        height: 40rem;
+        padding: 2rem 0;
         background-color: @bc-dark;
         border: 1px solid @text-color;
         margin-left: 50%;
         transform: translate(-50%);
         &-desc{
+            display: flex;
+            flex-direction: column;
             h2{
                 .bold();
                 font-size: 2.5rem;
@@ -692,9 +689,7 @@ nav{
         display: inline-block;
         position: absolute;
         cursor: pointer;
-        // width: 3rem;
-        // height: 3rem;
-        top: 65%;
+        bottom: 15%;
         left: 40%;
         img{
             width: 5rem;
@@ -709,9 +704,8 @@ nav{
         display: inline-block;
         position: absolute;
         cursor: pointer;
-        // background-color: #fff;
         border-radius: 50%;
-        top: 65%;
+        bottom: 15%;
         right: 40%;
         img{
             width: 5rem;
@@ -725,16 +719,18 @@ nav{
 }
 
 .faq{
+    display: flex;
     width: 100%;
-    height: 83rem;
+    min-height: 83rem;
     background-color: @bc-light;
     &-item{
         display: flex;
         flex-direction: column;
         .row-head{
             display: flex;
+            width: 100%;
+            justify-content: space-between;
             align-items: center;
-            margin-top: 1rem;
         }
         .row-body{
             display: none;
@@ -742,9 +738,10 @@ nav{
             margin-top: 2rem;
         }
         .question{
+            display: flex;
+            padding: 2rem 0;
             background-color: @bc-dark;
             width: 100%;
-            height: 7rem;
             border-radius: 2rem;
             box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.22);
             margin: 2rem 0;
@@ -752,7 +749,7 @@ nav{
             color: @text-color;
             animation: grow-rev 0.5s;
             &.full{
-                height: 19rem;
+                display: inline-block;
                 animation: grow-fw 0.5s;
             }
             &-text{
@@ -846,6 +843,7 @@ nav{
     }
 }
 .modal-frame{
+    display: none;
     position: fixed;
     top: 0;
     background-color: rgba(0, 0, 0, 0.6);
@@ -859,11 +857,9 @@ nav{
         justify-content: space-around;
         align-items: center;
         position: absolute;
-        // z-index: 5;
         top: 10%;
         left: 50%;
         transform: translateX(-50%);
-        // margin: 0 auto;
         width: 30rem;
         height: 40rem;
         background-color: @bc-light;
@@ -878,14 +874,14 @@ nav{
             .bold();
         }
         &-input{
-            width: 220px;
+            width: 22rem;
             height: 35px;
             padding-left: 1rem;
         }
         &-btn{
             background-color: @btn-color;
             color: @bc-light;
-            width: 220px;
+            width: 22rem;
             height: 35px;
             font-size: 1.8rem;
             &:hover{
@@ -914,8 +910,9 @@ nav{
 }
 
 .partners{
+    display: flex;
     width: 100%;
-    height: 35rem;
+    padding-bottom: 2rem;
     .partner-logo{
         display: flex;
         align-items: center;
@@ -959,10 +956,7 @@ footer{
         align-items: center;
         height: 55rem;
         background-color: @bc-dark;
-        // margin-top: 50%;
-        // transform: translateY(-55%);
         &-post{
-            // margin: 0 auto;
             animation: fade-in 1s;
 
         }
@@ -972,7 +966,6 @@ footer{
             cursor: pointer;
             top: 0;
             width: 70px;
-            // left: -6%;
             left: 0;
             background-color: rgba(0,0,0,.0);
             transition: 1s;
@@ -1005,7 +998,6 @@ footer{
             background-color: rgba(0,0,0,.0);
             transition: 1s;
             height: 100%;
-            // right: -6%;
             right: 0;
             &:hover {
                 background-color: rgba(0,0,0,.1);
@@ -1027,14 +1019,6 @@ footer{
             }
         }
     }
-    // .ig{
-    //     display: flex;
-    //     justify-content: center;
-    //     align-items: center;
-    //     height: 55rem;
-    //     background-color: @bc-dark;
-    //     border: 1px red solid;
-    // }
 }
 
 
@@ -1063,15 +1047,11 @@ footer{
 }
 
 @media (max-width: 991px) {
-    // html{
-    //     font-size: 8px;    
-    // }
     .nav{
         display: none;
     }
 
     .main{
-        height: 62rem;
         h1{
             font-size: 3rem;
             margin-top: 1rem;
@@ -1119,7 +1099,26 @@ footer{
         }
     }
     .program{
-        height: 67rem;
+        .prev{
+            &:hover {
+                background-color: rgba(0,0,0,.0);
+            }
+            .arrow-left{
+                &:hover{
+                    opacity: 0.2;
+                }
+            }
+        }
+        .next {
+            &:hover {
+                background-color: rgba(0,0,0,.0);
+            }
+            .arrow-right{
+                &:hover{
+                    opacity: 0.2;
+                }
+            }
+        }    
         &-wrapper{
             .program-decs{
                 font-size: 1.3rem;
@@ -1160,7 +1159,6 @@ footer{
     }
 
     .interest{
-        height: 36rem;
         h1{
             font-size: 3rem;
             margin-top: 6rem;
@@ -1186,7 +1184,6 @@ footer{
     }
 
     .reasons{
-        height: 60rem;
         &-item{
             img{
                 width: 9rem;
@@ -1202,17 +1199,43 @@ footer{
     }
 
     .faq{
-        height: 75rem;
+        min-height: 75rem;
     }
 
     .experts{
         height: 70rem;
         .experts-btn-prev, .experts-btn-next{
-            top: 80%;
+            bottom: 10%;
         }
     }
     .social-media{
-        height: 70rem;
+        display: flex;
+        height: 100%;
+        padding-bottom: 2rem;
+        .vk{
+            height: 100%;
+            padding: 2rem 0;
+            &-prev{
+                &:hover {
+                    background-color: rgba(0,0,0,.0);
+                }
+                &-left{
+                    &:hover{
+                        opacity: 0.2;
+                    }
+                }
+            }
+            &-next {
+                &:hover {
+                    background-color: rgba(0,0,0,.0);
+                }
+                &-right{
+                    &:hover{
+                        opacity: 0.2;
+                    }
+                }
+            }
+        }
         .ig-wrap{
             display: none;
         }
@@ -1308,7 +1331,7 @@ footer{
     }
 
     .main{
-        height: 72rem;
+        padding-bottom: 2rem;
         h1{
             margin-left: 0;
         }
@@ -1340,7 +1363,6 @@ footer{
     }
 
     .program{
-        height: 105rem;
         .algoritm{
             .program-decs-title{
                 width: 85%;
@@ -1388,7 +1410,6 @@ footer{
     }
 
     .interest{
-        height: 42rem;
         &-form{
             display: flex;
             flex-wrap: wrap;
@@ -1410,7 +1431,6 @@ footer{
     }
 
     .reasons{
-        height: 90rem;
         &-item{
             flex-direction: column-reverse;
         }
@@ -1501,7 +1521,6 @@ footer{
     }
 
     .program{
-        height: 110rem;
         .program-decs-title{
             text-align: left;
         }
@@ -1519,12 +1538,7 @@ footer{
         }
     }
 
-    .interest{
-        height: 48rem;
-    }
-
     .reasons{
-        height: 100rem;
         &-item{
             flex-direction: row;
             &.rev{
@@ -1536,29 +1550,7 @@ footer{
     }
 
     .faq{
-        height: 85rem;
-        &-item{
-            .question{
-                height: 7rem;
-                // animation: none;
-                &:nth-child(1){
-                    height: 10rem;
-                }
-                &.full{
-                    height: 22rem;
-                    // animation: none;
-                    &:nth-child(1){
-                        height: 26rem;
-                    }
-                }
-                &-btn{
-                    // animation: none;
-                    &.fwd{
-                        // animation: none;
-                    }
-                }
-            }
-        }
+        min-height: 85rem;
     }
 
     .experts{
@@ -1566,8 +1558,6 @@ footer{
         &-slide{
             width: 90%;
             flex-direction: column;
-            height: 78rem;
-        
             &-desc{
                 h2{
                     text-align: center;
@@ -1581,14 +1571,14 @@ footer{
             }
         }
         .experts-btn-prev{
-            top: 90%;
+            bottom: 5%;
             left: 35%;
             &:hover{
                 transform: none;
             }
         }
         .experts-btn-next{
-            top: 90%;
+            bottom: 5%;
             right: 35%;
             &:hover{
                 transform: none;
@@ -1597,9 +1587,7 @@ footer{
     }
 
     .social-media{
-        height: 87rem;
         .vk, .ig{
-            height: 75rem;
             &-prev{
                 &:hover {
                     background-color: rgba(0,0,0,.0);
@@ -1608,10 +1596,11 @@ footer{
                     top: 80%;
                     background-color: @main-color;
                     border-radius: 50%;
-                    left: 30%;
+                    border: 3px solid @main-color;
+                    left: 28%;
                     opacity: 0.4;
                     &:hover{
-                        opacity: 0;
+                        opacity: 0.4;
                     }
                 }
             }
@@ -1623,10 +1612,11 @@ footer{
                     top: 80%;
                     background-color: @main-color;
                     border-radius: 50%;
-                    left: 70%;
+                    border: 3px solid @main-color;
+                    left: 72%;
                     opacity: 0.4;
                     &:hover{
-                        opacity: 0;
+                        opacity: 0.4;
                     }
                 }
             }
@@ -1662,6 +1652,10 @@ footer{
     }
     .home-btn{
         right: 7%;
+        img{
+            height: 40px;
+            width: 40px;
+        }
     }
 }
 @media (max-width: 340px) {
@@ -1676,47 +1670,19 @@ footer{
         } 
     }
 
-    .main{
-        height: 76rem;
-    }
-
-    .program{
-        height: 120rem;
-    }
-
-    .reasons{
-        height: 105rem;
-    }
-
     .faq{
-        height: 90rem;
-        &-item{
-            .question{
-                height: 10rem;
-                &.full{
-                    height: 26rem;
-                }
-            }
-        }
-    
+        min-height: 90rem;
     }
 
     .experts{
-        &-slide{
-            height: 85rem;
-        }
+        height: 115rem;
         .experts-btn-next{
-            top: 92%;
+            bottom: 1%;
             right: 30%;
         }
         .experts-btn-prev{
-            top: 92%;
+            bottom: 1%;
             left: 30%;
         }
     }
-
-    .social-media{
-        height: 90rem;
-    }
-
 }

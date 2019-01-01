@@ -2,9 +2,10 @@ function form() {
     let btnModal = document.querySelectorAll(".btn-modal"),
         modalForm = document.querySelector(".modal-frame-form"),
         modalFrame = document.querySelector(".modal-frame"),
-        btnClose = document.querySelector(".close-btn");
+        btnClose = document.querySelector(".close-btn"),
+        homeBtn = document.querySelector(".home-btn");
 
-        modalFrame.style.display = "none";
+        // modalFrame.style.display = "none";
 
         btnClose.addEventListener('click', () => {
             modalFrame.style.display = "none";

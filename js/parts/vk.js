@@ -2,8 +2,6 @@ function vk() {
     let widgetWidth = 400;
 
     (document.documentElement.clientWidth < 580) ? widgetWidth = 320 : widgetWidth = 400;
-    // console.log(widgetWidth);
-
 
     (function() {
         VK.Widgets.Post("postVk1", -146293871, 248, 'JGRAacVK2d0-MENU8FFhqC4klDuK', {width: `${widgetWidth}`});
@@ -34,6 +32,7 @@ function vk() {
         
         // console.log(vkSlide[0].style.cssText);
         // console.log(vkSlide[0].children[0]);
+    if (document.documentElement.clientWidth < 768) vkSlide.forEach((item) =>{item.style.animation = "none";});
   
     vkSlide.forEach((item) => {
         item.style.display = "none";
@@ -93,17 +92,15 @@ function vk() {
 
     });
 
-
     //vk chat
 
-    let vk = VK.Widgets.CommunityMessages("vkMessage", 146293871, {
-        widgetPosition: "left",
-        welcomeScreen: 0,
-        disableButtonTooltip: 1,
+    // let vk = VK.Widgets.CommunityMessages("vkMessage", 146293871, {
+    //     widgetPosition: "left",
+    //     welcomeScreen: 0,
+    //     disableButtonTooltip: 1,
         
-    });
+    // });
 
-    // vk.stopTitleAnimation();
 }
 
 module.exports = vk;
