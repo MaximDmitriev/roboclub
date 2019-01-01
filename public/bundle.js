@@ -125,9 +125,9 @@ eval("function faq() {\n  var faqBtn = document.querySelectorAll(\".question-btn
   !*** ./parts/form.js ***!
   \***********************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("function form() {\n  var btnModal = document.querySelectorAll(\".btn-modal\"),\n      modalForm = document.querySelector(\".modal-frame-form\"),\n      modalFrame = document.querySelector(\".modal-frame\"),\n      btnClose = document.querySelector(\".close-btn\"),\n      homeBtn = document.querySelector(\".home-btn\"); // modalFrame.style.display = \"none\";\n\n  btnClose.addEventListener('click', function () {\n    modalFrame.style.display = \"none\";\n    document.body.style.overflow = \"\";\n    homeBtn.style.display = \"block\";\n  });\n  btnModal.forEach(function (item) {\n    item.addEventListener('click', function () {\n      modalFrame.style.display = \"block\";\n      document.body.style.overflow = \"hidden\";\n      homeBtn.style.display = \"none\";\n    });\n  });\n}\n\nmodule.exports = form;\n\n//# sourceURL=webpack:///./parts/form.js?");
+eval("function form() {\n  var mask = __webpack_require__(/*! ./mask */ \"./parts/mask.js\");\n\n  var btnModal = document.querySelectorAll(\".btn-modal\"),\n      modalForm = document.querySelector(\".modal-frame-form\"),\n      modalFrame = document.querySelector(\".modal-frame\"),\n      btnClose = document.querySelector(\".close-btn\"),\n      homeBtn = document.querySelector(\".home-btn\"),\n      inputFrame = document.querySelector(\"#inputFrame\"),\n      inputInterest = document.querySelector(\"#inputInterest\");\n  mask(inputFrame);\n  mask(inputInterest); // modalFrame.style.display = \"none\";\n\n  btnClose.addEventListener('click', function () {\n    modalFrame.style.display = \"none\";\n    document.body.style.overflow = \"\";\n    homeBtn.style.display = \"block\";\n  });\n  btnModal.forEach(function (item) {\n    item.addEventListener('click', function () {\n      modalFrame.style.display = \"block\";\n      document.body.style.overflow = \"hidden\";\n      homeBtn.style.display = \"none\";\n    });\n  });\n}\n\nmodule.exports = form;\n\n//# sourceURL=webpack:///./parts/form.js?");
 
 /***/ }),
 
@@ -139,6 +139,17 @@ eval("function form() {\n  var btnModal = document.querySelectorAll(\".btn-modal
 /***/ (function(module, exports) {
 
 eval("function ig() {\n  var btnIgprev = document.querySelector(\".ig-prev\"),\n      btnIgnext = document.querySelector(\".ig-next\"),\n      igPostNum = 1,\n      urls = [\"p/Bhvhnoyhhs0/\", \"p/BnsfxlLBPFe/\", \"p/BnwSx75lKVR/\", \"p/BodgLRVB3Wa/\", \"p/Bht1fD7hMpq/\", // \"p/BcagLIDlB9h/\",\n  \"p/BVq96PGFA0Z/\", \"p/BbytzKMlLLH/\"];\n  getIg(urls[0]);\n  btnIgnext.addEventListener('click', function () {\n    if (igPostNum == urls.length - 1) {\n      igPostNum = 0;\n    } else {\n      igPostNum++;\n    }\n\n    getIg(urls[igPostNum]);\n  });\n  btnIgprev.addEventListener('click', function () {\n    //пофиксить первый клик\n    if (igPostNum == 0) {\n      igPostNum = urls.length - 1;\n    } else {\n      igPostNum--;\n    }\n\n    getIg(urls[igPostNum]);\n  });\n\n  function getIg(url) {\n    var divIg = document.querySelector(\".ig-post\");\n    divIg.style.transition = \"0.5s\";\n    var request = new XMLHttpRequest();\n    request.open(\"GET\", \"https://api.instagram.com/oembed?url=http://instagr.am/\" + url + \"&maxwidth=320&omitscript=true&hidecaption=true\");\n    request.send();\n    request.addEventListener('readystatechange', function () {\n      if (request.readyState == 4 && request.status == 200) {\n        var data = JSON.parse(request.response);\n        divIg.style.opacity = 0;\n        setTimeout(function () {\n          divIg.innerHTML = data.html;\n          instgrm.Embeds.process(); // let frame = divIg.querySelector(\"iframe\");\n          // frame.addEventListener('load', () => {\n          //     frame.style.height = \"444px\";\n          //     console.log(frame);\n          // });\n\n          setTimeout(function () {\n            divIg.style.opacity = 1;\n          }, 600);\n        }, 500);\n      }\n    });\n  }\n}\n\nmodule.exports = ig;\n\n//# sourceURL=webpack:///./parts/ig.js?");
+
+/***/ }),
+
+/***/ "./parts/mask.js":
+/*!***********************!*\
+  !*** ./parts/mask.js ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("function mask(input) {\n  // input.focus();\n  input.selectionStart = input.value.length;\n  var numbers = [];\n\n  function writeToInput(id, arr) {\n    var output = \"+7 (\";\n\n    for (var i in arr) {\n      if (i == 3) {\n        output += \") \" + arr[i];\n        id.value = output;\n        continue;\n      }\n\n      if (i == 6 || i == 8) {\n        output += \" - \" + arr[i];\n        id.value = output;\n        continue;\n      }\n\n      output += arr[i];\n      id.value = output;\n    }\n  }\n\n  input.addEventListener('keydown', function (event) {\n    if (event.keyCode == 8 && numbers.length != 0) {\n      event.preventDefault();\n      numbers.pop();\n      writeToInput(input, numbers);\n    }\n  });\n  input.addEventListener('keypress', function (event) {\n    if (/\\D/g.test(event.key)) event.preventDefault();else {\n      if (numbers.length == 10) event.preventDefault();else {\n        event.preventDefault();\n        numbers.push(event.key);\n        writeToInput(input, numbers);\n      }\n    }\n  });\n}\n\nmodule.exports = mask;\n\n//# sourceURL=webpack:///./parts/mask.js?");
 
 /***/ }),
 

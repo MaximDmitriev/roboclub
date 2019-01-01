@@ -65,17 +65,17 @@
                 <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                 </button> -->
-                <div class="row nav">
+                <div class="row nav justify-content-between">
                         <div class="col-lg-2 nopad">
                             <div class="nav-menu">
                                 Главная
                             </div>
                         </div>
-                        <div class="col-lg-2 nopad">
+                        <!-- <div class="col-lg-2 nopad">
                             <div class="nav-menu">
                                 Мастер-класс
                             </div>
-                        </div>
+                        </div> -->
                         <div class="col-lg-2 nopad">
                             <div class="nav-menu">
                                 Программа
@@ -412,7 +412,7 @@
                 <div class="col-12">
                     <form class="interest-form" action="submit">
                         <input type="text" name="name" placeholder="Введите имя" required>
-                        <input type="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+                        <input type="phone" name="phone" placeholder="+7 (___) ___-__-__" required id="inputInterest">
                         <button class="btn">Перезвонить мне</button>
                     </form>
                 </div>
@@ -759,7 +759,7 @@
         <form class="modal-frame-form" action="#">
             <h2 class="modal-frame-form-title">Запишитесь на мастер-класс</h2>
             <input class="modal-frame-form-input" type="text" name="name" placeholder="Введите имя" required>
-            <input class="modal-frame-form-input" type="text" name="phone" placeholder="+7 (900) 111 11 11" required>
+            <input class="modal-frame-form-input" type="text" name="phone" placeholder="+7 (900) 111 11 11" required id="inputFrame">
             <button class="btn modal-frame-form-btn">Отправить</button>
             <p class="modal-frame-form-text">
                 Нажимая на кнопку, вы принимаете Положение и Согласие на обработку персональных данных.

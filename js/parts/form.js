@@ -1,9 +1,17 @@
 function form() {
+
+    let mask = require("./mask");
+
     let btnModal = document.querySelectorAll(".btn-modal"),
         modalForm = document.querySelector(".modal-frame-form"),
         modalFrame = document.querySelector(".modal-frame"),
         btnClose = document.querySelector(".close-btn"),
-        homeBtn = document.querySelector(".home-btn");
+        homeBtn = document.querySelector(".home-btn"),
+        inputFrame  = document.querySelector("#inputFrame"),
+        inputInterest = document.querySelector("#inputInterest");
+
+    mask(inputFrame);
+    mask(inputInterest);
 
         // modalFrame.style.display = "none";
 
