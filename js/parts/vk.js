@@ -32,7 +32,7 @@ function vk() {
         
         // console.log(vkSlide[0].style.cssText);
         // console.log(vkSlide[0].children[0]);
-    if (document.documentElement.clientWidth < 768) vkSlide.forEach((item) =>{item.style.animation = "none";});
+    if (document.documentElement.clientWidth < 768) vkSlide.forEach((item) => {item.style.animation = "none";});
   
     vkSlide.forEach((item) => {
         item.style.display = "none";
@@ -54,9 +54,9 @@ function vk() {
     // });
     // console.log(vkSlide[0].getAttribute("style"));
 
-    btnVknext.addEventListener('click', () =>{
+    btnVknext.addEventListener('click', () => {
         vkSlide[vkPostNum].style.display = "none";
-        if(vkPostNum == vkSlide.length - 1){
+        if(vkPostNum == vkSlide.length - 1) {
             vkPostNum = 0;
         } else {
             vkPostNum++; 
@@ -76,9 +76,9 @@ function vk() {
 
 
 
-    btnVkprev.addEventListener('click', () =>{
+    btnVkprev.addEventListener('click', () => {
         vkSlide[vkPostNum].style.display = "none";
-        if(vkPostNum == 0){
+        if(vkPostNum == 0) {
             vkPostNum = vkSlide.length - 1;
         } else {
             vkPostNum--; 

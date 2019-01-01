@@ -1,6 +1,7 @@
 function maps() {
     ymaps.ready(init);
-    function init () {
+
+    function init() {
         let myMap1 = new ymaps.Map("mapBibirevo", {
         //   center: [55.894882, 37.610855],
           center: [55.8948, 37.6108],

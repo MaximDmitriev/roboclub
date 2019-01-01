@@ -4,9 +4,11 @@ function experts() {
         expertSlide = document.querySelectorAll(".experts-slide");
 
     expNextBtn.addEventListener('click', () => {
-        expertSlide.forEach((item) => {
-            item.classList.toggle("active");
-        });
+        expertSlide.forEach((item) => item.classList.toggle("active"));
+    });
+
+    expPrevBtn.addEventListener('click', () => {
+        expertSlide.forEach((item) => item.classList.toggle("active"));
     });
 }
 

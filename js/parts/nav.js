@@ -9,9 +9,7 @@ function nav() {
         media = document.querySelector(".social-media"),
         contacts = document.querySelector(".contacts");
 
-    homeBtn.addEventListener('click', () => {
-        header.scrollIntoView({block:"start", behavior: "smooth"});
-    });
+    homeBtn.addEventListener('click', () => header.scrollIntoView({block:"start", behavior: "smooth"}));
 
     let homeMove = setInterval(function(){
         homeBtn.classList.add("up");

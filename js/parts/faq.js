@@ -18,7 +18,8 @@ function faq() {
         faqItemFull[n].style.display = "none";
     }
 
-
+    deploy(1);
+    
     faqBtn.forEach((item, i) => {
         item.addEventListener('click', (event) => {
     
@@ -27,9 +28,7 @@ function faq() {
                 toggle = !toggle;
             }
             else{
-                faqItem.forEach((item, i) => { 
-                    rollUp(i)
-                });
+                faqItem.forEach((item, i) => rollUp(i));
                 deploy(i);
             }  
         });

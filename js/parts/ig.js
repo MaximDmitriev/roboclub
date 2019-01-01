@@ -49,15 +49,8 @@ function ig() {
 
                 setTimeout(() => {
 
-                    
                     divIg.innerHTML = data.html;
                     instgrm.Embeds.process();
-
-                    // let frame = divIg.querySelector("iframe");
-                    // frame.addEventListener('load', () => {
-                    //     frame.style.height = "444px";
-                    //     console.log(frame);
-                    // });
 
                     setTimeout(() => {divIg.style.opacity = 1;}, 600);
                 }, 500);

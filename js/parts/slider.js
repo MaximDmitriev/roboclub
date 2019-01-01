@@ -34,21 +34,21 @@ function slider() {
         }
     }
   
-    // let autoSlide = setInterval(function(){slideToNext();}, 7000);
+    let autoSlide = setInterval(function(){slideToNext();}, 7000);
 
 
     nextBtn.addEventListener('click', () => {
-        // clearInterval(autoSlide);
+        clearInterval(autoSlide);
         slideToNext();
-        // autoSlide = setInterval(function(){slideToNext();}, 7000);
+        autoSlide = setInterval(function(){slideToNext();}, 7000);
         
 
     });
 
     prevBtn.addEventListener('click', () => {
-        // clearInterval(autoSlide);
+        clearInterval(autoSlide);
         slideToPrev();  
-        // autoSlide = setInterval(function(){slideToNext();}, 7000);     
+        autoSlide = setInterval(function(){slideToNext();}, 7000);     
     });
 }
 

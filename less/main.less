@@ -48,6 +48,14 @@
 }
 
 //Animations
+.animated{animation-duration:1s;animation-fill-mode:both}
+
+@keyframes pulse{
+    from{transform:scale3d(1,1,1)}
+    50%{transform:scale3d(1.05,1.05,1.05)}
+    to{transform:scale3d(1,1,1)}
+    }
+    .pulse{animation-name:pulse}
 
 @keyframes fade-in{
     from {opacity: 0;}
@@ -116,6 +124,9 @@ body{
             display: inline-block;
             padding-right: 1.4rem;
             padding-top: 1.4rem;
+            img{
+                width: 4rem;
+            }
         }
         .head-adress{
             display: inline-block;
