@@ -26,23 +26,23 @@ function nav() {
                 main.scrollIntoView({block:"start", behavior: "smooth"});
                 break;
 
-                case 1:
-                masterclass.scrollIntoView({block:"start", behavior: "smooth"});
-                break;
+                // case 1:
+                // masterclass.scrollIntoView({block:"start", behavior: "smooth"});
+                // break;
 
-                case 2:
+                case 1:
                 program.scrollIntoView({block:"start", behavior: "smooth"});
                 break;
 
-                case 3:
+                case 2:
                 media.scrollIntoView({block:"start", behavior: "smooth"});
                 break;
 
-                case 4:
+                case 3:
                 experts.scrollIntoView({block:"start", behavior: "smooth"});
                 break;
 
-                case 5:
+                case 4:
                 contacts.scrollIntoView({block:"start", behavior: "smooth"});
                 break;
             }

@@ -4,9 +4,12 @@ function form() {
 
     let btnModal = document.querySelectorAll(".btn-modal"),
         modalForm = document.querySelector(".modal-frame-form"),
+        msgForm = document.querySelector(".message-frame-form"),
         intForm = document.querySelector(".interest-form"),
         modalFrame = document.querySelector(".modal-frame"),
-        btnClose = document.querySelector(".close-btn"),
+        msgFrame = document.querySelector(".message-frame"),
+        btnClose = document.querySelector("#modalClose"),
+        btnMsgCls = document.querySelector("#msgClose"),
         homeBtn = document.querySelector(".home-btn"),
         inputFrame  = document.querySelector("#inputFrame"),
         inputInterest = document.querySelector("#inputInterest"),
@@ -24,6 +27,13 @@ function form() {
 
         });
 
+        btnMsgCls.addEventListener('click', () => {
+            msgFrame.style.display = "none";
+            document.body.style.overflow = "";
+            homeBtn.style.display = "block";
+
+        });
+
         btnModal.forEach((item) => {
             item.addEventListener('click', () => {
                 modalFrame.style.display = "block";
@@ -32,6 +42,16 @@ function form() {
 
             });
         });
+
+        let msgTxt = {
+            success: "Спасибо! <br> Мы скоро свяжемся в Вами!",
+            error: "Ошибка сервера!<br> Попробуйте еще раз."
+        };
+
+        let  msgImg = {
+            success: "./img/telephone.svg",
+            error: "./img/error.svg"
+        };
 
         function sendForm(btn, form) {
             
@@ -63,6 +83,25 @@ function form() {
                     r.addEventListener('readystatechange', () => {
                         if(r.status == 200 && r.readyState == 4) {
                             form.querySelectorAll("input").forEach((item) => item.value = "");
+                            modalFrame.style.display = "none";
+                            msgFrame.style.display = "block";
+                            msgForm.querySelector("p").innerHTML = msgTxt.success;
+                            msgForm.querySelector("img").setAttribute("src", msgImg.success);
+                            setTimeout(() => {
+                                msgFrame.style.display = "none";
+                                document.body.style.overflow = "";
+                                homeBtn.style.display = "block";
+                            }, 3000);
+                        }
+                        if(r.status != 200) {
+                            modalFrame.style.display = "none";
+                            msgFrame.style.display = "block";
+                            msgForm.querySelector("p").innerHTML = msgTxt.error;
+                            msgForm.querySelector("img").setAttribute("src", msgImg.error);
+                            setTimeout(() => {
+                                msgFrame.style.display = "none";
+                                modalFrame.style.display = "block";
+                            }, 3000);
                         }
     
                     });

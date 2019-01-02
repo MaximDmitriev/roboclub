@@ -920,6 +920,57 @@ nav{
     }
 }
 
+.message-frame{
+    display: none;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    animation: fade-in 1s;
+    &-form{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 30rem;
+        height: 40rem;
+        background-color: @bc-light;
+        border: 1px solid @main-color;
+        font-size: 1.8rem;
+        p{
+            margin-top: 2rem;
+            .bold();
+            text-align: center;
+        }
+        img{
+            margin-top: 4rem;
+            width: 10rem;
+        }
+        .close-btn{
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            background-color: @bc-light;
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+            text-align: center;
+            img{
+                width: 60%;
+                height: 60%;
+                margin-top: 7px;
+            }
+        }
+    }
+}
+
 .partners{
     display: flex;
     width: 100%;
