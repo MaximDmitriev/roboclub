@@ -77,7 +77,7 @@ function form() {
 
                     let r = new XMLHttpRequest();
     
-                    r.open("POST", "./server.php");
+                    r.open("POST", "./smart.php");
                     r.send(data);
     
                     r.addEventListener('readystatechange', () => {
