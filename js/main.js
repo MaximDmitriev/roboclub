@@ -12,14 +12,29 @@ document.addEventListener('DOMContentLoaded', () => {
         form = require("./parts/form");
     
     nav();
+    form();
     slider();
     experts();
     faq();
-    maps();
     vk();
-    ig();
-    form();
 
+    let viewMap = true,
+        viewIg = true;
+
+    (document.documentElement.clientWidth > 576) ? maps() : viewMap = false;
+    (document.documentElement.clientWidth > 991) ? ig() : viewIg = false;
+
+    window.addEventListener("resize", () => {
+        if(document.documentElement.clientWidth > 576 && viewMap == false) {
+            maps();
+            viewMap = true;
+        }
+            
+        if(document.documentElement.clientWidth > 991 && viewIg == false) {
+            ig();
+            viewIg = true;
+        } 
+    });
  
 });
 

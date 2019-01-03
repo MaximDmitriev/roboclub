@@ -103,11 +103,8 @@ function form() {
                                 modalFrame.style.display = "block";
                             }, 3000);
                         }
-    
                     });
                 }
-
-
             });
         }
 

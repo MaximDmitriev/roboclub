@@ -13,26 +13,6 @@ function ig() {
         "p/BbytzKMlLLH/"
     ];
 
-    getIg(urls[0]);
-
-    btnIgnext.addEventListener('click', () => {
-        if(igPostNum == urls.length - 1){
-            igPostNum = 0;
-        } else{
-            igPostNum++;
-        }
-        getIg(urls[igPostNum]);
-    });
-
-    btnIgprev.addEventListener('click', () => { //пофиксить первый клик
-        if(igPostNum == 0){
-            igPostNum = urls.length - 1;
-        } else{
-            igPostNum--;
-        }
-        getIg(urls[igPostNum]);
-    });
-
     function getIg(url){
         let divIg = document.querySelector(".ig-post");
         divIg.style.transition = "0.5s";
@@ -55,9 +35,28 @@ function ig() {
                     setTimeout(() => {divIg.style.opacity = 1;}, 600);
                 }, 500);
             }
-
         });
     }
+
+    getIg(urls[0]);
+
+    btnIgnext.addEventListener('click', () => {
+        if(igPostNum == urls.length - 1){
+            igPostNum = 0;
+        } else{
+            igPostNum++;
+        }
+        getIg(urls[igPostNum]);
+    });
+
+    btnIgprev.addEventListener('click', () => { //пофиксить первый клик
+        if(igPostNum == 0){
+            igPostNum = urls.length - 1;
+        } else{
+            igPostNum--;
+        }
+        getIg(urls[igPostNum]);
+    });
 }
 
 module.exports = ig;
