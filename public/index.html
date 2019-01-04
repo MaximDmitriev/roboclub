@@ -6,12 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="shortcut icon" href="/img/favicon.ico">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/main.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css"> -->
     <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=b59c759a-af40-45f1-8a1f-1e61f0009b9f&lang=ru_RU&mode=debug"></script> -->
-    <script src="https://vk.com/js/api/openapi.js?160"></script>
+    
+    <style>
+        @font-face {
+        font-family: 'FontAwesome5Brands';
+        src: url('../fonts/FontAwesome5BrandsRegular.eot');
+        src: url('../fonts/FontAwesome5BrandsRegular.eot?#iefix') format('embedded-opentype'), url('../fonts/FontAwesome5BrandsRegular.woff2') format('woff2'), url('../fonts/FontAwesome5BrandsRegular.woff') format('woff'), url('../fonts/FontAwesome5BrandsRegular.ttf') format('truetype'), url('../fonts/FontAwesome5BrandsRegular.svg#FontAwesome5BrandsRegular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        }
+        @font-face {
+        font-family: 'ProximaNova_bold';
+        src: url('../fonts/ProximaNova-Semibold.eot');
+        src: url('../fonts/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Semibold.woff2') format('woff2'), url('../fonts/ProximaNova-Semibold.woff') format('woff'), url('../fonts/ProximaNova-Semibold.ttf') format('truetype'), url('../fonts/ProximaNova-Semibold.svg#ProximaNova-Semibold') format('svg');
+        font-weight: 600;
+        font-style: normal;
+        }
+        @font-face {
+        font-family: 'ProximaNova_reg';
+        src: url('../fonts/ProximaNova-Regular.eot');
+        src: url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Regular.woff2') format('woff2'), url('../fonts/ProximaNova-Regular.woff') format('woff'), url('../fonts/ProximaNova-Regular.ttf') format('truetype'), url('../fonts/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        }
+
+        html {
+        font-size: 10px;
+        }
+        body {
+        font-family: 'ProximaNova_reg', sans-serif;
+        }
+    </style>
+    <!-- <script src="https://vk.com/js/api/openapi.js?160"></script> -->
     <title>Ardurobo</title>
 </head>
+
+
 <body>
     <header>
         <div class="header">
@@ -485,8 +518,8 @@
                             </div>
                             <div class="row-body">
                                 <div class="question-text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis necessitatibus enim,
-                                    eveniet at corrupti provident!Ipsam molestiae enim deleniti ipsum amet optio voluptatum officia excepturi, fuga aperiam veniam voluptas inventore?
+                                    Наш курс рассчитан в том числе и на тех, у кого не было опыта программирования. Главное требование - это навык чтения.
+                                    Но при этом у нас есть занятия и для тех, кто уже раньше занимался и хочет получить более глубокие знания.
                                 </div>
                             </div>
 
@@ -502,8 +535,7 @@
                             </div>
                             <div class="row-body">
                                 <div class="question-text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis necessitatibus enim,
-                                    eveniet at corrupti provident!Ipsam molestiae enim deleniti ipsum amet optio voluptatum officia excepturi, fuga aperiam veniam voluptas inventore?
+                                    Для занятий мы предоставляем все необходимое оборудование. У каждого свой комплект.
                                 </div>
                             </div>
                         </div>
@@ -518,8 +550,8 @@
                             </div>
                             <div class="row-body">
                                 <div class="question-text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis necessitatibus enim,
-                                    eveniet at corrupti provident!Ipsam molestiae enim deleniti ipsum amet optio voluptatum officia excepturi, fuga aperiam veniam voluptas inventore?
+                                    К сожалению, дети иногда болеют. Мы понимаем, что от этого никто не застрахован и у нас
+                                    есть способы, чтобы восполнить пропущенные занятия и не отстать от группы.
                                 </div>
                             </div>
                         </div>
@@ -534,8 +566,8 @@
                             </div>
                             <div class="row-body">
                                 <div class="question-text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis necessitatibus enim,
-                                    eveniet at corrupti provident!Ipsam molestiae enim deleniti ipsum amet optio voluptatum officia excepturi, fuga aperiam veniam voluptas inventore?
+                                    Да, есть и дополнительные занятия. У нас есть несколько направлений, не входящих в основную программу, в том
+                                    числе и подготовка к соревнованиям.
                                 </div>
                             </div>
                         </div>
@@ -755,7 +787,7 @@
             <input class="modal-frame-form-input" type="text" name="phone" placeholder="+7 (900) 111 11 11" required id="inputFrame">
             <button class="btn modal-frame-form-btn" type="submit">Отправить</button>
             <p class="modal-frame-form-text">
-                Нажимая на кнопку, вы принимаете Положение и Согласие на обработку персональных данных.
+                Нажимая на кнопку, вы даете <a href="http://robboclub.ru/agreement/" target="blank">согласие</a> на обработку персональных данных.
             </p>
 
             <div class="close-btn" id="modalClose">
@@ -780,9 +812,13 @@
     <div class="vk-message" id="vkMessage"></div>
     <div class="home-btn"><img src="./img/chevron-left.png" alt="home prev"></div>
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <script src="https://vk.com/js/api/openapi.js?160"></script>
     <script async src="//www.instagram.com/embed.js"></script>
-    <script src="./js/foreach.js"></script>
-    <script src="./public/bundle.js"></script>
+    <script src="./foreach.js"></script>
+    <script src="./bundle.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=b59c759a-af40-45f1-8a1f-1e61f0009b9f&lang=ru_RU&mode=debug"></script>
     <!-- <script type="text/javascript" src="https://vk.com/js/api/openapi.js?160"></script> -->
 </body>
