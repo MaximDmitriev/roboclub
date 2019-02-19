@@ -34,13 +34,13 @@ function slider() {
         }
     }
   
-    let autoSlide = setInterval(function(){slideToNext();}, 7000);
+    let autoSlide = setInterval(function(){slideToNext();}, 15000);
 
 
     nextBtn.addEventListener('click', () => {
         clearInterval(autoSlide);
         slideToNext();
-        autoSlide = setInterval(function(){slideToNext();}, 7000);
+        autoSlide = setInterval(function(){slideToNext();}, 15000);
         
 
     });
@@ -48,7 +48,7 @@ function slider() {
     prevBtn.addEventListener('click', () => {
         clearInterval(autoSlide);
         slideToPrev();  
-        autoSlide = setInterval(function(){slideToNext();}, 7000);     
+        autoSlide = setInterval(function(){slideToNext();}, 15000);     
     });
 }
 

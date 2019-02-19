@@ -18,6 +18,16 @@ document.addEventListener('DOMContentLoaded', () => {
     faq();
     vk();
 
+    let browser = window.navigator.userAgent,
+        text = document.querySelectorAll(".experts-slide-desc p");
+
+        if(/msie/i.test(browser) || /trident/i.test(browser)){
+            text.forEach((item) =>{
+                item.style.maxWidth = "35%";
+            });
+        }
+
+
     let viewMap = true,
         viewIg = true;
 
